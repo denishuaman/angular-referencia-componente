@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { VarRefPlantillaComponent } from './var-ref-plantilla/var-ref-plantilla.component';
 import { PadreViewChildComponent } from './padre-view-child/padre-view-child.component';
 import { HijoViewChildComponent } from './hijo-view-child/hijo-view-child.component';
+import { PadreViewChildrenComponent } from './padre-view-children/padre-view-children.component';
+import { HijoViewChildrenComponent } from './hijo-view-children/hijo-view-children.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     VarRefPlantillaComponent,
     PadreViewChildComponent,
-    HijoViewChildComponent
+    HijoViewChildComponent,
+    PadreViewChildrenComponent,
+    HijoViewChildrenComponent
   ],
   imports: [
     BrowserModule,
