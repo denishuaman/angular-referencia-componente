@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-var-ref-plantilla',
   templateUrl: './var-ref-plantilla.component.html',
   styleUrls: ['./var-ref-plantilla.component.css']
 })
-export class VarRefPlantillaComponent implements OnInit {
+export class VarRefPlantillaComponent {
 
-  constructor() { }
+  nombresCompletos: string;
 
-  ngOnInit() {
+  pintar(nombres: HTMLInputElement, apellidos: HTMLInputElement) {
+    this.nombresCompletos = nombres.value.concat(' ').concat(apellidos.value);
   }
-
 }

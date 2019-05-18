@@ -1,7 +1,12 @@
 <div class="card">
   <h3 class="card-header">Variable de referencia de plantilla</h3>
   <div class="card-body">
-    <input type="file" style="display: none;" #uploader>
-    <button (click)="uploader.click()" class="btn btn-success">Cargar archivo</button>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Ingrese nombres completos" #nombres>
+      <input type="text" class="form-control" placeholder="Ingrese apellidos completos" #apellidos>
+      <button class="btn btn-success" (click)="pintar(nombres, apellidos)">Pintar datos</button>
+    </div>
+    <br>
+    <div class="alert alert-primary" role="alert">Texto ingresado: <strong>{{ nombresCompletos }}</strong></div>
   </div>
 </div>

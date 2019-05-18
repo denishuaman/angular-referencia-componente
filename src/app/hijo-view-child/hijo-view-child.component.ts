@@ -5,14 +5,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './hijo-view-child.component.html',
   styleUrls: ['./hijo-view-child.component.css']
 })
-export class HijoViewChildComponent implements OnInit {
-  mensaje: string;
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class HijoViewChildComponent {
+  mensajeEnviado: string;
 
   editarMensaje(mensaje: string) {
-    this.mensaje = mensaje;
+    this.mensajeEnviado = mensaje;
   }
 }

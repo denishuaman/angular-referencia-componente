@@ -1,9 +1,24 @@
-<button (click)="agregar()">Agregar</button>
-<button (click)="remover()">Remover</button>
-<button (click)="voltearColores()">Voltear colores</button>
-<br><br>
-<select #selectComponentes>
-  <option *ngFor="let option of arr; let index = index" [value]="index">componente {{index + 1}}</option>
-</select>
-<button (click)="voltearColor(selectComponentes.value)">Voltear color</button>
-<app-hijo-view-children *ngFor="let i of arr"></app-hijo-view-children>
+<div class="card">
+  <h4 class="card-header">@ViewChildren: Referencia de varios componentes desde una clase</h4>
+  <div class="card-body">
+    <button (click)="agregarComponente()" class="btn btn-outline-success col-lg-4">Agregar
+      componente</button>
+    <button (click)="removerUltimoComponente()" class="btn btn-outline-success col-lg-4">Remover ultimo
+      componente</button>
+    <button (click)="intercambiarColores()" class="btn btn-outline-success col-lg-4">Cambiar
+      colores</button>
+    <br>
+    <br>
+    <div class="input-group">
+      <select class="custom-select" #selectComponentes>
+        <option *ngFor="let option of arr; let index = index" [value]="index">componente {{index + 1}}</option>
+      </select>
+      <div class="input-group-append">
+        <button type="button" (click)="cambiarColor(selectComponentes.value)" class="btn btn-success">Cambiar de
+          color</button>
+      </div>
+    </div>
+    <br>
+    <app-hijo-view-children *ngFor="let i of arr"></app-hijo-view-children>
+  </div>
+</div>

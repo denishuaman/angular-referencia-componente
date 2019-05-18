@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { HijoViewChildComponent } from '../hijo-view-child/hijo-view-child.component';
 
 @Component({
@@ -6,7 +6,7 @@ import { HijoViewChildComponent } from '../hijo-view-child/hijo-view-child.compo
   templateUrl: './padre-view-child.component.html',
   styleUrls: ['./padre-view-child.component.css']
 })
-export class PadreViewChildComponent implements OnInit {
+export class PadreViewChildComponent {
 
   // primera forma de referenciar
   @ViewChild('hijo')
@@ -17,11 +17,6 @@ export class PadreViewChildComponent implements OnInit {
   // componenteHijo: HijoViewChildComponent;
   texto: string;
   mensajeDeError: string;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   enviarMensaje() {
     if (!this.texto) {

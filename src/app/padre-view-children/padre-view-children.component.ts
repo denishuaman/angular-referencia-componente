@@ -19,14 +19,14 @@ export class PadreViewChildrenComponent implements AfterViewInit {
     });
   }
 
-  agregar() {
+  agregarComponente() {
     this.arr.push(this.arr.length + 1);
   }
 
-  remover() {
+  removerUltimoComponente() {
     this.arr.pop();
   }
-  voltearColor(index: number) {
+  cambiarColor(index: number) {
     if (!index) {
       return;
     }
@@ -34,7 +34,7 @@ export class PadreViewChildrenComponent implements AfterViewInit {
     componente.voltearColor();
   }
 
-  voltearColores() {
+  intercambiarColores() {
     this.hijos.forEach((componente: HijoViewChildrenComponent) => {
       componente.voltearColor();
     });

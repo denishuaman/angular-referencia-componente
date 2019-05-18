@@ -1,7 +1,13 @@
-<h4>ViewChild con una variable de referencia de plantilla</h4>
-Escribe algo:
-<input type="text" [(ngModel)]="texto">
-<span style="color: red;">{{mensajeDeError}}</span>
-<br>
-<button (click)="enviarMensaje()">Enviar</button>
-<app-hijo-view-child #hijo></app-hijo-view-child>
+<div class="card">
+  <h4 class="card-header">@ViewChild: Referencia de un componente desde una clase</h4>
+  <div class="card-body">
+    <div class="input-group">
+      <input type="text" [(ngModel)]="texto" class="form-control" placeholder="Escribe un mensaje">
+      <br>
+      <button (click)="enviarMensaje()" class="btn btn-success">Enviar</button>
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="mensajeDeError">{{mensajeDeError}}</div>
+    <br>
+    <app-hijo-view-child #hijo></app-hijo-view-child>
+  </div>
+</div>
